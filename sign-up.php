@@ -196,6 +196,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     margin-bottom: 40px;
 }
 
+.chaitu-links {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.chaitu-signin-link {
+    color: #fff;
+    margin-top: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+.chaitu-signin-text{
+    color: #cccccc;
+}
+
+.chaitu-signin-link:hover {
+    color: #dc3545;
+}
+
+.chaitu-signin-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #dc3545;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.chaitu-signin-link:hover:after{
+    width: 100%;
+}
+
+
+
+
 .chaitu-brand {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
@@ -556,6 +601,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <button type="submit" class="chaitu-submit-btn">Create Account</button>
     </form>
+
+    <div class="chaitu-links">
+       
+        <div class="chaitu-signin-section">
+            <p class="chaitu-signin-text"> Already registered?</p>
+            <a href="http://localhost/Chaitu-Wordpress/wordpress/sign-in/" class="chaitu-signin-link">Sign In Here</a>
+        </div>
+    </div>
+    
+    
 </div>
 
 </body>

@@ -236,26 +236,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     transform: translateY(0);
 }
 
-.chaitu-forgot-password {
+.chaitu-links {
     text-align: center;
     margin-top: 25px;
     padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.chaitu-forgot-link {
+.chaitu-forgot-password {
+    margin-bottom: 15px;
+}
+
+.chaitu-register-section {
+    margin-top: 15px;
+}
+
+.chaitu-forgot-link, .chaitu-register-link {
     color: #cccccc;
     text-decoration: none;
     font-size: 0.95rem;
     transition: all 0.3s ease;
     position: relative;
+    display: inline-block;
 }
 
-.chaitu-forgot-link:hover {
+.chaitu-forgot-link:hover, .chaitu-register-link:hover {
     color: #dc3545;
 }
 
-.chaitu-forgot-link:after {
+.chaitu-forgot-link:after, .chaitu-register-link:after {
     content: '';
     position: absolute;
     width: 0;
@@ -267,8 +276,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     transform: translateX(-50%);
 }
 
-.chaitu-forgot-link:hover:after {
+.chaitu-forgot-link:hover:after, .chaitu-register-link:hover:after {
     width: 100%;
+}
+
+.chaitu-register-text {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.chaitu-register-link {
+    font-weight: 500;
+    color: #ffffff;
 }
 
 /* Responsive Design */
@@ -417,8 +437,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" name="submit" class="chaitu-submit-btn">Sign In</button>
     </form>
 
-    <div class="chaitu-forgot-password">
-        <a href="http://localhost/Chaitu-Wordpress/wordpress/forgot-password/" class="chaitu-forgot-link">Forgot your password?</a>
+    <div class="chaitu-links">
+        <div class="chaitu-forgot-password">
+            <a href="http://localhost/Chaitu-Wordpress/wordpress/forgot-password/" class="chaitu-forgot-link">Forgot your password?</a>
+        </div>
+        
+        <div class="chaitu-register-section">
+            <p class="chaitu-register-text">Don't have an account?</p>
+            <a href="http://localhost/Chaitu-Wordpress/wordpress/sign-up/" class="chaitu-register-link">Create Account</a>
+        </div>
     </div>
 </div>
 
